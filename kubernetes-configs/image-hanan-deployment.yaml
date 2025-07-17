@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: image-hanan
+  namespace: prod-hanan
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: image-hanan
+  template:
+    metadata:
+      labels:
+        app: image-hanan
+    spec:
+      containers:
+      - name: image-hanan
+        image: hanangh/image-hanan:latest
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10

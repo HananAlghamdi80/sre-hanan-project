@@ -1,0 +1,10 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: image-hanan-pdb
+  namespace: prod-hanan
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: image-hanan
