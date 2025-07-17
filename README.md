@@ -45,9 +45,7 @@
 - نصّبت **Prometheus** و **Grafana** باستخدام Helm.
 - أضفت **Alertmanager** ضمن الـ stack لمراقبة الخدمات.
 - تابعت حالة النظام وسجلت الملاحظات المتعلقة بالمشاكل التي ظهرت.
-## 🗑️ حذف Pod
 
-![حذف Pod](https://github.com/HananAlghamdi80/sre-hanan-project/blob/main/diagrams/delete-pod.png?raw=true)
 
 ---
 
@@ -74,3 +72,7 @@
 - تابعت الأحداث باستخدام:
   ```bash
   kubectl get events
+
+  ## 🗑️ حذف Pod
+
+![حذف Pod](https://github.com/HananAlghamdi80/sre-hanan-project/blob/main/diagrams/delete-pod.png?raw=true)
